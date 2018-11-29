@@ -1,0 +1,11 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view  hidden='{{!loadingHidden}}'>
+  <view class='container' wx:for='{{searchs}}' wx:key="unique" bindtap='itemClick' id='{{index}}'>
+    <text class='poem_name'>{{item.name}}</text>
+    <text class='poem_content'>{{item.content}}</text>
+  </view>
+</view>
+<text class='tips'>暂不支持关键词搜索，敬请谅解</text>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

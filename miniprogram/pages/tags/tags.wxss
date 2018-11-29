@@ -1,0 +1,24 @@
+/* miniprogram/pages/sort/sort.wxss */
+.search_container{
+  flex-direction:row;
+  display: flex;
+  margin-top: 20px;
+  margin: 10px;
+}
+input{
+  width: 80%;
+  font-size: 14px
+}
+.search_cancel{
+  color: #C68739
+}
+.tag_container{
+  flex-direction:row;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.tag_item{
+  margin: 10px;
+}

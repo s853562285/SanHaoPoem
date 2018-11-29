@@ -1,0 +1,51 @@
+{
+  "name": "regenerator-runtime",
+  "author": {
+    "name": "Ben Newman",
+    "email": "bn@cs.stanford.edu"
+  },
+  "description": "Runtime for Regenerator-compiled generator and async functions.",
+  "version": "0.13.1",
+  "main": "runtime.js",
+  "keywords": [
+    "regenerator",
+    "runtime",
+    "generator",
+    "async"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
+  },
+  "license": "MIT",
+  "_id": "regenerator-runtime@0.13.1",
+  "_npmVersion": "6.4.1",
+  "_nodeVersion": "8.11.4",
+  "_npmUser": {
+    "name": "benjamn",
+    "email": "ben@benjamn.com"
+  },
+  "dist": {
+    "integrity": "sha512-5KzMIyPLvfdPmvsdlYsHqITrDfK9k7bmvf97HvHSN4810i254ponbxCQ1NukpRWlu6en2MBWzAlhDExEKISwAA==",
+    "shasum": "522ea2aafd9200a00eee143dc14219a35a0f3991",
+    "tarball": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.1.tgz",
+    "fileCount": 4,
+    "unpackedSize": 24765,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb7xFkCRA9TVsSAnZWagAAxQoQAJ3h/F9HulEQGRVwHJ6K\nJcKX7nFIlRWsmToc5/EKgqMYx/8EeTmdksMj8N8if4QhbMIVYJI67CbTgeVz\ntqHx4eJc+qlD2gYzUYQi4865WJD8ddClHQutueG5diLXLDHdjJO1BiEMBUyb\niYM2+VsT+YtoxpVUmCx6NXOG23PkVSLiKa+C9DEqWQAGUZbDA7MTAsv2nM9/\n9Yxn7FkQOTWlgtB8/2dx2rx5nMK295zZvzxOTyit6Eg2ekzxJkvsfejC8ygJ\n308G0ZxoUl0WWfGnbUBYr/iKhdMo/orxyQe5QNKA5kHMQ7mk2vX/pDyxHBh9\n8jHDfx95kEWFk6yGJAGhxMh4ZJsdTQy7y4xhNChI+m3OetHppvs/WHzqAUz1\njfV3MejgSAxe1uUG7dWpxdlFw28kvXq1eI4roxszjJcbq0sX8kUfxGO9Z63T\nKWn5nbjixkmlYvjCdsvHsAQlCQLePZqsAtVfJ5ajoITZIsCdNEUdSGvKooET\nJu2rbBGkYTl16CyLPu+oLAxDPXnacjrSP4sP4x7Wyy8xD6nol/Pr6ztCP/2E\nSq+alsinLPPVGd2M3sjW7PbOiyiz22DEGmlc12TOZA5/XdmIh+vji6fACIwc\n+8SMj3ujqsVbJLTA1xCxVbrPmWupF4/H34s+HG4/JrGgY/tFz+bxDXETDEtn\n3OET\r\n=GrDQ\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "maintainers": [
+    {
+      "name": "benjamn",
+      "email": "bn@cs.stanford.edu"
+    }
+  ],
+  "directories": {},
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/regenerator-runtime_0.13.1_1542394212059_0.7211625959030727"
+  },
+  "_hasShrinkwrap": false,
+  "_shasum": "522ea2aafd9200a00eee143dc14219a35a0f3991",
+  "_resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.1.tgz",
+  "_from": "regenerator-runtime@>=0.13.0 <0.14.0"
+}

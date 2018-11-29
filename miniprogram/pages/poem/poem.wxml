@@ -1,0 +1,2 @@
+<!--miniprogram/pages/poem/poem.wxml-->
+<include src="/pages/recommend/recommend.wxml"/>

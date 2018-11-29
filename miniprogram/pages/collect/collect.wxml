@@ -1,0 +1,38 @@
+<!--miniprogram/pages/collect/collect.wxml-->
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+      诗词
+    </view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+      诗人
+    </view>
+</view>
+<swiper current="{{currentTab}}" style="height:{{winHeight}}rpx" duration="300"  bindchange="swiperTab">
+    <swiper-item >
+      <scroll-view  scroll-y="true" bindscrolltolower="loadMorePoem">
+        <navigator  wx:for='{{poems}}' wx:key="unique" url='/pages/poem/poem?poem={{item.id}}'>
+          <view class='poem_container'>
+              <text class='poem_name'>{{item.name}}</text>
+              <text class='poem_content'>{{item.content}}</text>
+          </view>
+        </navigator>
+        <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+        <view class="loading complete" hidden="{{poemHasMore}}">{{poems.length>0?'已加载全部':'暂无内容，快去收藏吧~'}}</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="loadMorePoet">
+        <navigator  wx:for='{{poets}}' wx:key="unique" url='/pages/author/author?author={{item.id}}&isYun=true'>
+          <view class='poem_container'>
+              <text class='poem_name'>{{item.name}}</text>
+              <text class='poem_content'>{{item.content}}</text>
+          </view>
+        </navigator>
+        <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+        <view class="loading complete" hidden="{{poetHasMore}}">{{poets.length>0?'已加载全部':'快去收藏吧~'}}</view>
+      </scroll-view>
+    </swiper-item>
+</swiper>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

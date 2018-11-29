@@ -1,0 +1,31 @@
+<!--miniprogram/pages/recommend.wxml-->
+<view class='container' hidden="{{!loadingHidden}}" >
+  <view class='poem'>
+    <text class='title'>{{poem.name+'\n'}}</text>
+    <text class='dynasty'>{{poem.dynasty+'|'+poem.poet.name+'\n'}}</text>
+    <text class='content'>{{poem.content+'\n'}}</text>
+  </view>
+  <view class='collect_star'>
+    <image class='collect' bindtap='doCollect' src='{{collect?"/images/icon_do_collect_checked.png":"/images/icon_do_collect_nol.png"}}'></image>
+    <view class='star' bindtap='doStar'>
+      <image class='star_icon' src='{{star?"/images/icon_star_checked.png":"/images/icon_star_nol.png"}}'></image>
+      <text class='stat_num' style='color:{{star?"#e6c7a1":"#dbdbdb"}}'>{{poem.star}}</text>
+    </view>
+    <button open-type="share" class='share' plain='true' hover-class='none'>
+      <image class='star_icon' src='/images/icon_share.png' mode='widthFix'></image>
+    </button>
+  </view>
+  <button class='refresh' bindtap='onLoad' hidden='{{getNextHidden}}'>换一首</button>
+  <navigator class='author_nav' url='/pages/author/author?author={{poem.poet.id}}' wx:if="{{poem.poet&&poem.poet.id!=0?true:false}}">
+    <view class='author'>
+      <text class='author_name'>{{poem.poet.name}}</text>
+      <text class='author_desc'>{{poem.poet.desc}}</text>
+    </view>
+  </navigator>
+  <text class='fanyi'>{{poem.fanyi}}</text>
+  <text class='shangxi'>{{poem.shangxi}}</text>
+  <text class='about'>{{poem.about}}</text>
+</view>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

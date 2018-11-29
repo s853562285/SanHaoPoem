@@ -1,0 +1,13 @@
+<scroll-view  scroll-y="true" bindscrolltolower="loadMorePoet">
+  <navigator  wx:for='{{poets}}' wx:key="unique" url='/pages/author/author?author={{item._id}}&isYun=true'>
+    <view class='poem_container'>
+        <text class='poem_name'>{{item.name}}</text>
+        <text class='poem_content'>{{item.desc}}</text>
+    </view>
+  </navigator>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{poetHasMore}}">{{poets.length>0?'已加载全部':'暂无内容~'}}</view>
+</scroll-view>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

@@ -1,0 +1,103 @@
+/* miniprogram/pages/recommend.wxss */
+.poem{
+  width: 80%;
+  margin-top: 20px;
+  height: 100%;
+  text-align:center;
+}
+text{
+  display:inline/inline-block;
+  text-align: left;
+  line-height:40px
+}
+.dynasty{
+  font-size: 14px;
+  color: gray;
+}
+.refresh{
+  font-size: 16px;
+  width: 30%;
+  margin: 20px;
+  text-align: center;
+  color: #e6c7a1
+}
+.author_nav{
+
+  width: 90%;
+}
+.author{
+  width: 100%;
+  margin-top: 20px;
+  border:1px solid #e6c7a1;
+  text-align:left;
+  margin-bottom: 20px
+}
+.author_name{
+  padding: 5px;
+  font-size: 16px;
+  color: gray;
+  line-height:20px
+}
+.author_desc{
+  padding: 5px;
+  font-size: 14px;
+  color: gray;
+  overflow:hidden;/*只显示三行*/
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  line-height:20px
+  
+}
+.fanyi{
+   width: 90%;
+  font-size: 16px;
+  color: #C68739;
+  line-height:20px
+}
+.shangxi{
+   width: 90%;
+  font-size: 16px;
+  color: #DEB787;
+  line-height:20px
+}
+.about{
+  font-size: 16px;
+  color: gray;
+   width: 90%;
+  line-height:20px
+}
+.collect_star{
+  width: 50%;
+  flex-direction:row;
+  display: flex;
+  justify-content:space-between;
+}
+.collect{
+  width:30px;
+  height: 30px;
+  padding: 10px;
+}
+.star{
+  flex-direction:row;
+  display: flex;
+  padding: 10px;
+  justify-content:center;
+}
+.star_icon{
+  width: 30px;
+  height: 30px;
+}
+.stat_num{
+  color: #dbdbdb;
+  font-size: 14px;
+}
+.share{
+  margin: 10px;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.share[plain]{ border: none; }

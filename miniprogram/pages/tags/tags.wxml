@@ -1,0 +1,15 @@
+<!--miniprogram/pages/sort/sort.wxml-->
+<view class='search_container'>
+  <icon type='search'></icon>
+  <input type='text' placeholder='请输入作者或诗名进行搜索' confirm-type='search' bindconfirm='onSearchConfirm' value='{{search}}'></input>
+  <text class='search_cancel' bindtap='onCancelBtnClcik'>取消</text>
+</view>
+<view class='tag_container'>
+  <navigator url='/pages/authors/authors' hidden="{{!loadingHidden}}"><button class='tag_item' >作者</button></navigator >
+  <navigator url='/pages/tags/all_poem/all_poem' hidden="{{!loadingHidden}}"><button class='tag_item' >全部</button></navigator >
+  <navigator wx:for="{{tags}}" wx:key="unique"  url='/pages/tag_poem/tag_poem?tag={{item.name}}' ><button class='tag_item' id='{{item.objectId}}'>{{item.name}}</button></navigator >
+</view>
+
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

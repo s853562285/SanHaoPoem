@@ -1,0 +1,29 @@
+<!--miniprogram/pages/author/author.wxml-->
+<view class='container' hidden='{{!loadingHidden}}'>
+  <image class='author_pic' src='{{author.image}}' mode='aspectFit' wx:if="{{author.image?true:false}}"></image>
+  <view class='author_introduce_container'>
+    <text class='author_name'>{{author.name}}\n</text>
+    <text class='author_introduce'>{{author.desc}}</text>
+  </view>
+  <view class='collect_star'>
+    <image class='collect' bindtap='doCollect' wx:if='{{collect}}' src='/images/icon_do_collect_checked.png'></image>
+    <image class='collect' bindtap='doCollect' wx:else src='/images/icon_do_collect_nol.png'></image>
+    
+    <button open-type="share" class='share' plain='true' hover-class='none'>
+      <image class='share_pic' src='/images/icon_share.png' mode='widthFix'></image>
+    </button>
+  </view>
+  
+  <navigator class='author_poem_container' url='/pages/author_poem/author_poem?author={{author.poetId}}'> 
+    <view class='author_poem_container'>
+      <text class='author_poem'>『作者诗文』</text>
+    </view>
+  </navigator>
+  <view class='author_content_container'>
+    <text class='author_content'>{{author.content}}</text>
+  </view>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/recommend/recommend",
+    "pages/collect/collect",
+    "pages/tags/tags",
+    "pages/search/search",
+    "pages/tag_poem/tag_poem",
+    "pages/poem/poem",
+    "pages/author/author",
+    "pages/author_poem/author_poem",
+    "pages/authors/authors",
+    "pages/tags/all_poem/all_poem"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "三号诗社",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#e6c7a1",
+    "borderStyle": "#bfbfbf",
+    "list": [
+      {
+        "selectedIconPath": "images/icon_recommend_checked.png",
+        "iconPath": "images/icon_recommend_nol.png",
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐"
+      },
+      {
+        "selectedIconPath": "images/icon_sort_checked.png",
+        "iconPath": "images/icon_sort_nol.png",
+        "pagePath": "pages/tags/tags",
+        "text": "诗词"
+      },
+      {
+        "selectedIconPath": "images/icon_collect_checked.png",
+        "iconPath": "images/icon_collect_nol.png",
+        "pagePath": "pages/collect/collect",
+        "text": "收藏"
+      }
+    ]
+  }
+}

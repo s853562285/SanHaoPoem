@@ -1,0 +1,2 @@
+/* miniprogram/pages/tags/all_poem/all_poem.wxss */
+@import "/pages/authors/authors.wxss"

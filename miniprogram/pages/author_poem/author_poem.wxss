@@ -1,0 +1,37 @@
+/* miniprogram/pages/author_poem/author_poem.wxss */
+.poem_container{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom:1px solid #e6c7a1;
+}
+.poem_name{
+  color: #C68739;
+  font-size: 16px;
+  font-weight: bold
+}
+.poem_content{
+  color: gray;
+  font-size: 14px;
+  overflow:hidden;/*只显示三行*/
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+navigator{
+  width: 100%
+}
+.btn_container{
+  flex-direction:row;
+  display: flex;
+  margin: 10px;
+}
+.btn_previous{
+  margin-right: 60px
+}

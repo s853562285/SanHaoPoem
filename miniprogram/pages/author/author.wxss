@@ -1,0 +1,59 @@
+/* miniprogram/pages/author/author.wxss */
+.author_pic{
+  height: 200px;
+  margin-top: 10px
+}
+.author_name{
+  font-size: 24px;
+  font-weight: bold;
+}
+.author_introduce_container{
+  margin: 10px;
+}
+.author_introduce{
+  color: #C68739;
+  margin: 5px;
+}
+.author_content{
+  color: gray;
+  margin: 5px;
+}
+.author_content_container{
+  margin: 10px;
+}
+.author_poem{
+  color: rgb(75, 134, 223);
+  width: 100%;
+  text-align: right;
+}
+.author_poem_container{
+  width: 100%;
+  padding: 5px;
+  text-align: right;
+}
+.collect{
+  width:30px;
+  height: 30px;
+  padding: 10px;
+  
+}
+
+.collect_star{
+  width: 50%;
+  flex-direction:row;
+  display: flex;
+  justify-content:space-between;
+}
+.share{
+  margin: 10px;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.share[plain]{ border: none; }
+.share_pic{
+  width:30px;
+  height: 30px;
+  margin-top: 0px;
+}

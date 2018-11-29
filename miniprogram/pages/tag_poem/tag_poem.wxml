@@ -1,0 +1,16 @@
+<!--miniprogram/pages/tag_poem/tag_poem.wxml-->
+<view class='container'>
+  <navigator  wx:for='{{poems}}' wx:key="unique" url='/pages/poem/poem?poem={{item._id}}'>
+    <view class='poem_container'>
+      <text class='poem_item'>《{{item.name}}》{{item.poet.name}}</text>
+    </view>
+  </navigator>
+  <view class='btn_container' hidden="{{!loadingHidden}}">
+    <button class='btn_previous' bindtap='onPreviousBtnClick' hidden='{{pageIndex<=1}}'>上一页</button>
+    <button class='btn_next' bindtap='onNextBtnClick' hidden='{{!hasMore}}'>下一页</button>
+
+  </view>
+</view>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

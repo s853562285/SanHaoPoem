@@ -1,0 +1,14 @@
+<!--miniprogram/pages/tags/all_poem/all_poem.wxml-->
+<scroll-view  scroll-y="true" bindscrolltolower="loadMorePoem">
+  <navigator  wx:for='{{poems}}' wx:key="unique" url='/pages/poem/poem?poem={{item._id}}'>
+    <view class='poem_container'>
+        <text class='poem_name'>{{item.name}}</text>
+        <text class='poem_content'>{{item.content}}</text>
+    </view>
+  </navigator>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{poemHasMore}}">{{poems.length>0?'已加载全部':'暂无内容~'}}</view>
+</scroll-view>
+<loading hidden="{{loadingHidden}}">
+        加载中...
+</loading>

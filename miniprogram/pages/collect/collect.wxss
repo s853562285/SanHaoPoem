@@ -1,0 +1,61 @@
+/* miniprogram/pages/collect/collect.wxss */
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 50%; 
+    color:#434343;
+}
+.active{
+    color:#C68739;
+    border-bottom: 4rpx solid #C68739;
+}
+swiper{
+  text-align: center;
+}
+.poem_container{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom:1px solid #e6c7a1;
+}
+.poem_name{
+  color: #C68739;
+  font-size: 16px;
+  font-weight: bold
+}
+.poem_content{
+  color: gray;
+  font-size: 14px;
+  overflow:hidden;/*只显示三行*/
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+navigator{
+  width: 100%
+}
+scroll-view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.loading{
+  color: gray;
+  font-size: 14px;
+}
