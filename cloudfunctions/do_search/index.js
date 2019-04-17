@@ -16,16 +16,44 @@ exports.main = async (event, context) => {
     name:true,
     content:true
   }).where({
-    name:value
+    name: {
+      $regex: '.*' + value,
+      $options: 'i' //不区分大小写
+    } 
   }).get().then(res =>{
     if (res.data) {
       for (var i = 0; i < res.data.length; i++) {
-        data.push({
-          id: res.data[i]._id,
-          type: "01",
-          name: res.data[i].name,
-          content: res.data[i].content
-        });
+        if (data.findIndex(result=>{ return result.id==res.data[i]._id })==-1) {
+          data.push({
+            id: res.data[i]._id,
+            type: "01",
+            name: res.data[i].name,
+            content: res.data[i].content
+          });
+        }
+      }
+    }
+  });
+  await db.collection("poetry").field({
+    id: true,
+    name: true,
+    content: true
+  }).where({
+    content: {
+      $regex: '.*' + value,
+      $options: 'i' //不区分大小写
+    }
+  }).get().then(res => {
+    if (res.data) {
+      for (var i = 0; i < res.data.length; i++) {
+        if (data.findIndex(result => { return result.id == res.data[i]._id }) == -1) {
+          data.push({
+            id: res.data[i]._id,
+            type: "01",
+            name: res.data[i].name,
+            content: res.data[i].content
+          });
+        }
       }
     }
   });
@@ -34,7 +62,10 @@ exports.main = async (event, context) => {
     name:true,
     desc:true
   }).where({
-    name: value
+    name: {
+      $regex: '.*' + value,
+      $options: 'i' //不区分大小写
+    } 
   }).get().then(res => {
     if(res.data){
       for (var i = 0; i < res.data.length; i++) {
