@@ -23,7 +23,7 @@ exports.main = async (event, context) => {
   }else{
     hasMore=true;
   }
-  return db.collection(dbName).field(field).where(filter).skip((pageIndex-1)*pageSize).limit(pageSize).get().then(res =>{
+  return db.collection(dbName).field(field).where(filter).skip((pageIndex - 1) * pageSize).limit(pageSize).orderBy('star', 'desc').get().then(res =>{
     res.hasMore=hasMore;
     return res;
   });

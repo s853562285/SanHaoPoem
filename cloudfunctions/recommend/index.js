@@ -12,7 +12,7 @@ exports.main = async(event, context) => {
   const seedMostStar=4;
   const seedAllRandom=5;
   var recommendID = '';
-  var seeds=[1,4,4,1,5,1,4,3,4,2,3,4,5,4,1,4,3,4,2,4,3,4,4,4];
+  var seeds=[1,4,4,1,5,1,4,1,4,2,3,4,5,4,1,4,3,4,2,4,3,4,4,4];
   var seed = parseInt((seeds.length-1) * Math.random());//产生随机数，决定从哪里选择推荐
   if(seeds[seed]==seedPoet){
     return await db.collection('poet_collect').where({ user: eventuser }).orderBy('date', 'desc').get()

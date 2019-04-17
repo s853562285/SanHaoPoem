@@ -10,7 +10,28 @@ exports.main = async (event, context) => {
   if (!value) {
     return { data: [], hasMore: false }
   }
-  var data=[];
+  var data = [];
+  await db.collection("poet").field({
+    poetId: true,
+    name: true,
+    desc: true
+  }).where({
+    name: {
+      $regex: '.*' + value,
+      $options: 'i' //不区分大小写
+    }
+  }).get().then(res => {
+    if (res.data) {
+      for (var i = 0; i < res.data.length; i++) {
+        data.push({
+          id: res.data[i].poetId,
+          type: "00",
+          name: res.data[i].name,
+          content: res.data[i].desc
+        });
+      }
+    }
+  });
   await db.collection("poetry").field({
     id:true,
     name:true,
@@ -20,7 +41,7 @@ exports.main = async (event, context) => {
       $regex: '.*' + value,
       $options: 'i' //不区分大小写
     } 
-  }).get().then(res =>{
+    }).orderBy('star', 'desc').get().then(res =>{
     if (res.data) {
       for (var i = 0; i < res.data.length; i++) {
         if (data.findIndex(result=>{ return result.id==res.data[i]._id })==-1) {
@@ -43,7 +64,7 @@ exports.main = async (event, context) => {
       $regex: '.*' + value,
       $options: 'i' //不区分大小写
     }
-  }).get().then(res => {
+    }).orderBy('star', 'desc').get().then(res => {
     if (res.data) {
       for (var i = 0; i < res.data.length; i++) {
         if (data.findIndex(result => { return result.id == res.data[i]._id }) == -1) {
@@ -54,27 +75,6 @@ exports.main = async (event, context) => {
             content: res.data[i].content
           });
         }
-      }
-    }
-  });
-  await db.collection("poet").field({
-    poetId:true,
-    name:true,
-    desc:true
-  }).where({
-    name: {
-      $regex: '.*' + value,
-      $options: 'i' //不区分大小写
-    } 
-  }).get().then(res => {
-    if(res.data){
-      for (var i = 0; i < res.data.length; i++) {
-        data.push({
-          id:res.data[i].poetId,
-          type:"00",
-          name: res.data[i].name,
-          content: res.data[i].desc
-        });
       }
     }
   });
