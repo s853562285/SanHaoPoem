@@ -12,7 +12,10 @@ exports.main = async (event, context) => {
   var pageIndex = event.pageIndex ? event.pageIndex : 1;
   var pageSize = event.pageSize ? event.pageSize : 10;
   var filter = {
-    tags: _.in([tag])
+    tags: {
+      $regex: '.*' + tag,
+      $options: 'i' //不区分大小写
+    }
   };
   const countResult = await db.collection(dbName).field(field).where(filter).count();
   const total=countResult.total;
