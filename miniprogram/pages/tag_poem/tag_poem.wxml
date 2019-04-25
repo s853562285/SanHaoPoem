@@ -2,7 +2,8 @@
 <view class='container'>
   <navigator  wx:for='{{poems}}' wx:key="unique" url='/pages/poem/poem?poem={{item._id}}'>
     <view class='poem_container'>
-      <text class='poem_item'>《{{item.name}}》{{item.poet.name}}</text>
+      <text class='poem_name'>《{{item.name}}》{{item.poet.name}}</text>
+      <text class='poem_content'>{{item.content}}</text>
     </view>
   </navigator>
   <view class='btn_container' hidden="{{!loadingHidden}}">

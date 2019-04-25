@@ -1,17 +1,5 @@
 /* miniprogram/pages/tag_poem/tag_poem.wxss */
-.poem_container{
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom:1px solid #e6c7a1;
-}
-navigator{
-  width: 100%
-}
+@import "/pages/collect/collect.wxss";
 .btn_container{
   flex-direction:row;
   display: flex;

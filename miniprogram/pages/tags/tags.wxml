@@ -1,7 +1,7 @@
 <!--miniprogram/pages/sort/sort.wxml-->
 <view class='search_container'>
   <icon type='search'></icon>
-  <input type='text' placeholder='请输入作者或诗名进行搜索' confirm-type='search' bindconfirm='onSearchConfirm' value='{{search}}'></input>
+  <input type='text' placeholder='请输入关键字进行搜索' confirm-type='search' bindconfirm='onSearchConfirm' value='{{search}}'></input>
   <text class='search_cancel' bindtap='onCancelBtnClcik'>取消</text>
 </view>
 <view class='tag_container'>

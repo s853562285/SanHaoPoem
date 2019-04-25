@@ -5,7 +5,7 @@
     <text class='poem_content'>{{item.content}}</text>
   </view>
 </view>
-<text class='tips'>暂不支持关键词搜索，敬请谅解</text>
+<!-- <text class='tips'>暂不支持关键词搜索，敬请谅解</text> -->
 <loading hidden="{{loadingHidden}}">
         加载中...
 </loading>

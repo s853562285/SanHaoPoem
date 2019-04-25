@@ -38,7 +38,8 @@ Page({
     var fields = {
       id: true,
       name: true,
-      poet: true
+      poet: true,
+      content:true
     };
     wx.cloud.callFunction({
       name: 'get_tag_poems',
