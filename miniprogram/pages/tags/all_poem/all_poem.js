@@ -36,7 +36,7 @@ Page({
     }
     console.info(totalPage);
     var that = this;
-    db.collection('poetry').field({ name: true, _id: true, content: true }).orderBy('star', 'desc')
+    db.collection('poetry').field({ name: true, _id: true, content: true,poet:true }).orderBy('star', 'desc')
       .skip((pageIndex - 1) * this.data.pageSize).limit(this.data.pageSize).get({
         success: function (res) {
           console.info(res);

@@ -2,7 +2,7 @@
 <scroll-view  scroll-y="true" bindscrolltolower="loadMorePoem">
   <navigator  wx:for='{{poems}}' wx:key="unique" url='/pages/poem/poem?poem={{item._id}}'>
     <view class='poem_container'>
-        <text class='poem_name'>{{item.name}}</text>
+        <text class='poem_name'>《{{item.name}}》{{item.poet.name}}</text>
         <text class='poem_content'>{{item.content}}</text>
     </view>
   </navigator>
